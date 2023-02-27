@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FAStudio.MainPage">
+    <Grid>
+        <Image x:Name="UAY"
+            Source="dotnet_bot.png"
+            SemanticProperties.Description="Cute dot net bot waving hi to you!"
+            HeightRequest="200"
+            TranslationY="-100"
+            HorizontalOptions="Center"/>
+        <!--
+        <Switch IsToggled="false"
+            TranslationY="100"
+            HorizontalOptions="Center"
+            ThumbColor="Red"
+            />
+        -->
+        <Entry x:Name="EnterInput"
+            Keyboard="Text"
+            Placeholder="输入文件完整路径"
+            VerticalOptions="CenterAndExpand"
+            Text="C:\Users\wjl20\Desktop\day.sps"
+            HeightRequest="10"
+            ClearButtonVisibility="WhileEditing"
+            TranslationY="10"
+            FontFamily="fonts.ttf"/>
+        <Entry x:Name="EnterOutput"
+            Placeholder="输入输出文件完整路径"
+            TextColor="Red"
+            Text="C:\Users\wjl20\Desktop\Windows_Phone\"
+            BackgroundColor="Black"
+            TranslationY="90"
+            VerticalOptions="CenterAndExpand" />
+        <Label Text="程序 by 冬日-春上"
+               TextColor="Red"
+               HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="Tips_ALL"
+            Placeholder="提示框"
+            TextColor="CadetBlue"
+            BackgroundColor="Blue"
+            Text="temp"
+            TranslationY="150"
+            VerticalOptions="CenterAndExpand" />
+        <VerticalStackLayout 
+            HorizontalOptions="End" 
+            VerticalOptions="End" 
+            Padding="10" 
+            Margin="0,0,-200,50" 
+            Spacing="5" 
+            x:Name="LIST_1">
+        <Button Text="WMA->XNB" Clicked="WMAConverXNB"/>
+        <Button Text="XNB->WAV" Clicked="XNBConverWAV"/>
+        <Button Text="WAV->XNB" Clicked="WAVConverXNB"/>   
+        <Button Text="XNB->PNG" Clicked="XNBConverPNG"/>
+        <Button Text="PNG->XNB" Clicked="PNGConverXNB"/>
+        <Button Text="XNB->Font" Clicked="XNBConverFont"/>
+        <Button Text="Font->XNB" Clicked="FontConverXNB"/>
+        <Button Text="EA->WAV" Clicked="EAConverWAV"/>
+        </VerticalStackLayout>
+    <Button Text="选择" 
+                HorizontalOptions="End" 
+                VerticalOptions="End"
+                x:Name="LIST" 
+                BorderColor="Blue" 
+                Clicked="LIST_Clicked"/>
+    </Grid>
+</ContentPage>
